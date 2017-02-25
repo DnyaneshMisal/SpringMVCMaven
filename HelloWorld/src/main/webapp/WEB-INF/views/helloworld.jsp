@@ -9,15 +9,15 @@
 	<center>
 		<h2>Hello World</h2>
 		<h2>
-			${message}
-			First Name ${User.fname}<br>
-			Last Name ${User.lname}<br>
-			Age	${User.age}<br>
-			Hobby ${User.hobby}<br>
-			DOB	${User.dob}<br>
-			Date Of Departure ${User.dateOfDeparture}<br>
+			${message}<br>
+			First Name:${User.fname}<br>
+			Last Name:${User.lname}<br>
+			Age:${User.age}<br>
+			Hobby:${User.hobby}<br>
+			DOB:${User.dob}<br>
+			Date Of Departure:${User.dateOfDeparture}<br>
 			
-			<%=request.getAttribute("strRequest")%>
+			<%=request.getAttribute("strRequest")%><br>
 			<%=session.getAttribute("strSession")%>
 		</h2>
 	</center>
