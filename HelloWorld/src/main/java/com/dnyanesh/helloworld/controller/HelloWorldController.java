@@ -1,10 +1,9 @@
 package com.dnyanesh.helloworld.controller;
 
-import java.util.Date;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -28,8 +27,8 @@ public class HelloWorldController {
 		
 		String strRequest = "Hello  from request";
 		String strSession = "Hello from session";
-		request.setAttribute("strRequest", user);
-		session.setAttribute("strSession", user);
+		request.setAttribute("strRequest", strRequest);
+		session.setAttribute("strSession", strSession);
 		System.out.println("in controller");
 		ModelAndView mv = new ModelAndView("helloworld");
 		mv.addObject("message", message);
