@@ -23,15 +23,11 @@ public class HelloWorldController {
 
 		if (result.hasErrors()) {
 			ModelAndView mv = new ModelAndView("index");
-			System.out.println("has errors");
-			Date today = new Date();
-
-			System.out.println("Date today is" + today);
 			return mv;
 		}
 		
-		String strRequest = "Dnyanesh in request";
-		String strSession = "Dnyanesh in session";
+		String strRequest = "Hello  from request";
+		String strSession = "Hello from session";
 		request.setAttribute("strRequest", user);
 		session.setAttribute("strSession", user);
 		System.out.println("in controller");
