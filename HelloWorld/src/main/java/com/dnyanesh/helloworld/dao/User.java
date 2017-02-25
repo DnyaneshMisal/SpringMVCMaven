@@ -11,23 +11,26 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class User {
 	
-	@NotNull
+	@NotNull(message="First Name Should not be blank")
 	private String fname;
-	@NotNull
+	
+	@NotNull(message="Last Name Should not be blank")
 	private String lname;
 
-	@Size(min=2,max=10)
+	@NotNull(message="Hobby Should not be blank")
+	@Size(min=2,max=10,message="Hobby should be  min={min} and Max={max} long")
 	private String hobby;
 	
-	@NotNull
+	@NotNull(message="Age Should not be blank")
 	private int age;
 	
-	@NotNull
+	@NotNull(message="Date of Birth Should not be blank")
 	@DateTimeFormat(pattern="mm/dd/yyyy")
-	@Past
+	@Past(message="Date of Birth must be in past")
 	private Date dob;
 	
-	@NotNull
+	@NotNull(message="Departure Date Should not be blank")
+	@Past(message="Departure must be in Future")
 	@DateTimeFormat(pattern="mm/dd/yyyy")
 	@Future
 	private Date dateOfDeparture;
